@@ -1,0 +1,210 @@
+@import './Fonts.css';
+
+.HomePage {
+  /* text-align: center; */
+  background-color: black;
+  display: grid;
+  grid-template-areas:
+    "logo logo"
+    "intro menu"
+    "more more";
+  grid-template-rows: 5em 1fr 10vh;
+  grid-gap: 10px;
+  height: 100vh;
+  /* width: 100vw; */
+}
+
+.page-img {
+  max-width: 100vw;
+  /* max-height: 40vh; */
+  height: 100vh;
+  pointer-events: none;
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+  /* background-image: linear-gradient(transparent, black), url('../Assets/Images/STARS.png'); */
+  /* background: linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.70)), url('../Assets/Images/ikat pattern.png'); */
+  background-color: black;
+  /* background-size: 7em; */
+}
+
+.more-icon {
+  grid-area: more;
+  height: 5em;
+  color: white;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 1em;
+  cursor: pointer;
+  animation: anim 1.5s infinite;
+}
+
+@keyframes anim {
+  from {
+    bottom: 1em;
+  }
+  50% {
+    bottom: 0;
+  }
+  to {
+    bottom: 1em;
+  }
+}
+
+.Intro {
+  margin-top: 20vh;
+  grid-area: intro;
+  align-self: start;
+  margin-left: 10vw;
+}
+
+.Menu {
+  margin-top: 20vh;
+  grid-area: menu;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-self: start;
+  justify-self: end;
+  margin-right: 10vw;
+}
+
+.hello-class {
+  color: white;
+  font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Inter-Bold;
+}
+
+.hello-body {
+  font-family: Body-Primary;
+  font-size: 1.5em;
+  color: #7FE2DC;
+  max-width: 600px;
+  margin-right: 5vw;
+}
+
+.menu-class {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 5em;
+  font-family: Inter-Bold;
+  color: rgba(0,0,0,0);
+  -webkit-text-stroke: 2px #664771;
+  cursor: pointer;
+}
+
+.menu-class:hover {
+  color: #664771;
+  animation: hover 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hover {
+  from {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+  to {
+    margin-top: -0.05em;
+    margin-bottom: 0.55em;
+  }
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-serial {
+  font-family: Inter-Regular;
+  margin-right: 1em;
+  font-size: 1em;
+  color: #808080;
+  margin-top: 2em;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .HomePage {
+    grid-template-areas:
+      "logo"
+      "intro"
+      "menu"
+      "more";
+    grid-template-rows: 5em 1fr 1fr 10vh;
+  }
+
+  .page-img {
+    max-width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    background-size: 7em;
+  }
+  
+  .Intro {
+    margin-left: 3vw;
+    max-width: 100vw;
+    margin-top: 2vh;
+  }
+
+  .hello-class {
+    font-size: 4em;
+  }
+
+  .hello-body {
+    font-size: 1.5em;
+  }
+
+  .Menu {
+    margin-top: 5vh;
+    margin-right: 0;
+    justify-self: start;
+    margin-left: 4vw;
+    align-content: end;
+  }
+
+  .menu-serial {
+    margin-top: 1em;
+  }
+
+  .menu-class {
+    font-size: 3em;
+  }
+
+  .more-icon {
+    height: 4em;
+  }
+}
+
+@media only screen and (max-height: 800px) and (max-width: 1200px){
+
+  .Menu {
+    margin-top: 1vh;
+  }
+
+  .menu-serial {
+    margin-top: 0.5em;
+  }
+
+  .menu-class {
+    -webkit-text-stroke: 1px #664771;
+    font-size: 2em;
+  }
+
+  .menu-item {
+    font-size: 0.8em;
+  }
+
+  .more-icon {
+    height: 3em;
+  }
+}

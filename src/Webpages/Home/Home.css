@@ -1,0 +1,92 @@
+.Home {
+  /* text-align: center; */
+  /* background-color: #1B1B1B; */
+  /* background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), url('../../Assets/Images/ikat\ pattern.png'); */
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+
+.pilgrim-header {
+  background: url('../../Assets/Images/Header.png') no-repeat center center;
+  background-size: contain;
+  margin: 1em 0;
+  height: 20em;
+  /* background-attachment: fixed; */
+}
+
+.divider {
+  height: 1em;
+  border-bottom: 2px solid #808080;
+  opacity: 50%;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  height: 30em;
+  background-color: #808080;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 1000px;
+}
+
+.continent {
+  position: absolute;
+}
+
+.continent-NA {
+  top: 58px;
+  left: 90px;
+}
+
+.continent-SA {
+  top: 250px;
+  left: 220px;
+}
+
+.continent-Africa {
+  top: 201.5px;
+  left: 380px;
+}
+
+.continent-Europe {
+  top: 57.6px;
+  left: 420px;
+}
+
+.continent-Asia {
+  top: 80px;
+  left: 527px;
+}
+
+.continent-Oceania {
+  top: 312px;
+  left: 770px;
+}
+
+svg.continent path {
+  fill: black;
+  cursor: pointer;
+}
+
+svg.continent path:hover {
+  fill: white;
+}
+
+.main-text {
+  text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+  /* .Home {
+    padding: 0 5vw;
+  } */
+}
+
+@media only screen and (max-width: 700px) {
+  /* .Home {
+    grid-template-rows: 100vh 4em 1fr;
+  } */
+}
